@@ -1,0 +1,12 @@
+#container {
+    height: 512px;
+    width: 512px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    display: grid;
+}
+
+.cell {
+
+}
