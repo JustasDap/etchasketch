@@ -14,6 +14,7 @@ function generate(gridSize){
             console.log('added cell');
         }
     }
+    layoutGrid(cellSize, gridSize);
 }
 
 //function which adds css grid rules for grid
@@ -21,4 +22,13 @@ function layoutGrid(cellSize, gridSize)  {
     const container = document.getElementById('container')
     container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
     container.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
+}
+
+// adds event listener to generated divs
+function listen(){
+    document.querySelectorAll('.cell').forEach(cell => {
+        cell.addEventListener('mouseover', event => {
+            cell.style.backgroundColor = 'black';
+        })
+    })    
 }
