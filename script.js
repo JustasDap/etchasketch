@@ -1,7 +1,6 @@
 //function which creates <divs> for drawing grid
-function generate(){
+function generate(gridSize){
     const container = document.querySelector('#container');
-    let gridSize = document.getElementById('gridSize').value;
     let cellSize = 512 / gridSize;
     for(let i = 0; i < gridSize;i++){
         for(let j = 0; j < gridSize;j++){
@@ -31,3 +30,13 @@ function listen(){
         })
     })    
 }
+
+document.getElementById('createBtn').addEventListener('click', function(){
+    let gridSize = document.getElementById('gridSize').value;
+    if(isNaN(gridSize)){
+        alert('please type a number of squares per side of a new grid');
+    } else {
+        generate(gridSize);
+        listen();
+    }
+})
