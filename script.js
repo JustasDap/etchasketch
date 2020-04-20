@@ -1,9 +1,8 @@
-let gridSize = 16;
-let cellSize = 512 / gridSize;
-
 //function which creates <divs> for drawing grid
-function generate(gridSize){
+function generate(){
     const container = document.querySelector('#container');
+    let gridSize = document.getElementById('gridSize').value;
+    let cellSize = 512 / gridSize;
     for(let i = 0; i < gridSize;i++){
         for(let j = 0; j < gridSize;j++){
             const div = document.createElement('div');
