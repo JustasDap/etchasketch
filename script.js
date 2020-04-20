@@ -15,3 +15,10 @@ function generate(gridSize){
         }
     }
 }
+
+//function which adds css grid rules for grid
+function layoutGrid(cellSize, gridSize)  {
+    const container = document.getElementById('container')
+    container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
+}
