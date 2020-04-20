@@ -40,3 +40,9 @@ document.getElementById('createBtn').addEventListener('click', function(){
         listen();
     }
 })
+
+document.getElementById('resetBtn').addEventListener('click', function(){
+    document.querySelectorAll('.cell').forEach(cell => {
+        cell.style.backgroundColor = 'white';
+    })
+})
