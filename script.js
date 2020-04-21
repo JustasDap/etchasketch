@@ -31,16 +31,19 @@ function listen(){
     })    
 }
 
+//when event buttonn is clicked
 document.getElementById('createBtn').addEventListener('click', function(){
     let gridSize = document.getElementById('gridSize').value;
-    if(isNaN(gridSize)){
+    if(isNaN(gridSize)||gridSize === ""){
         alert('please type a number of squares per side of a new grid');
     } else {
+        document.getElementById('container').innerHTML = "";
         generate(gridSize);
         listen();
     }
 })
 
+//when reset button is clicked
 document.getElementById('resetBtn').addEventListener('click', function(){
     document.querySelectorAll('.cell').forEach(cell => {
         cell.style.backgroundColor = 'white';
